@@ -1,0 +1,26 @@
+Minimum RTO for a single AZ outage: around 5 min
+we have multi-az activated so RTO should be very fast in couple of seconds, here is my observation during RDS failover with Multi-AZ option:
+
+May 13,2021, 2:15:59 AM  Multi-AZ instance failover started (assume problem started at 2:10:00 and it takes 5 minutes the alert triggers and remediation starts)
+May 13,2021, 2:16:10 AM  DB instance restarted
+May 13,2021, 2:16:44 AM  The user requested a failover of DB instance
+May 13,2021, 2:16:44 AM  Multi-AZ instance failover complated
+May 13,2021, 2:17:00  (around this time, RDS was available)  
+
+
+Minimum RTO for a single region outage
+If one region fails, we have to promote the read replica to take place of the master database. This requires manual intervention and asynchronous replication is there so RTO and RPO are higher in this case.
+00:00 - region fails (0 minutes)
+00:05 - Time before the alert triggers (5 minutes)
+00:06 - Alert triggers on-all staff (1 minute)
+00:16 - On-call staff may need to get out of bed, get to computer, log in, log onto VPN (10 minutes)
+00:26 - On-call staff starts diagnosing issue (10 minutes)
+00:41 - Root cause is discovered (15 minutes)
+00:46 - promote read replica to becomes master (5 minutes)
+00:56 - RDS in master state and available (10 minutes)
+Minimum RPO for a single AZ outage
+Since we have a separate synchronous copy of the volume being maintained in a separate data center (AZ) for multi-az activation so RPO is near to zero
+https://forums.aws.amazon.com/thread.jspa?threadID=310192
+Minimum RPO for a single region outage:
+it takes longer than AZ failure because read replica activated and it requires manual intervention and deponds on 
+backups, or cross-region snapshot copies so it takes more than 5 min to hour.
