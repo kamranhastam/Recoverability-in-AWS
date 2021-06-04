@@ -1,0 +1,91 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.05.12 11:52:47 =~=~=~=~=~=~=~=~=~=~=~=
+
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ 
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ ls
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ pwd
+/home/ec2-user
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ sudo yum update
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 3.7 kB     00:00     
+No packages marked for update
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ sudo yum install mysql
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package mariadb.x86_64 1:5.5.68-1.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package        Arch          Version                   Repository         Size
+================================================================================
+Installing:
+ mariadb        x86_64        1:5.5.68-1.amzn2          amzn2-core        8.8 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 8.8 M
+Installed size: 49 M
+Is this ok [y/d/N]: y
+Downloading packages:
+mariadb-5.5.68-1.amzn2.x86_64.rpm                          | 8.8 MB   00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [                             ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#                            ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##                           ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###                          ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [####                         ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#####                        ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [######                       ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#######                      ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [########                     ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#########                    ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##########                   ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###########                  ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [############                 ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#############                ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##############               ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###############              ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [################             ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#################            ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##################           ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###################          ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [####################         ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#####################        ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [######################       ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#######################      ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [########################     ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#########################    ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##########################   ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###########################  ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [############################ ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86_64                              1/1 
+  Verifying  : 1:mariadb-5.5.68-1.amzn2.x86_64                              1/1 
+
+Installed:
+  mariadb.x86_64 1:5.5.68-1.amzn2                                               
+
+Complete!
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ mysql -u admin -p -h udacity.c1mkkzccazo0.us-west-1 .rds.amazonaws.com
+Enter password: 
+(B[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \g.
+(B[m(B[0;1mYour MySQL connection id is 167
+Server version: 8.0.20 Source distribution
+
+(B[m(B[0;1mCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+(B[m(B[0;1mType 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+(B[m[?1034hMySQL [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| udacity            |
+| udacitytable       |
++--------------------+
+(B[0;1m5 rows in set (0.01 sec)
+(B[m(B[0;1m
+(B[mMySQL [(none)]> select * from udacitytable
+    -> ;
+ERROR 1046 (3D000): No database selected
+(B[0;7m(B[mMySQL [(none)]> usee[K udacitytable;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+(B[0;1mDatabase changed
+(B[mMySQL [udacitytable]> select * from Persons
+    -> ;
++----------+-----------+-----------+---------+--------+
+| PersonID | LastName  | FirstName | Address | City   |
++----------+-----------+-----------+---------+--------+
+|        1 | Kyle      | Law       | 123 ABC | irvine |
+|        2 | Willis    | Jack      | 456 DEF | Irvine |
++----------+-----------+-----------+---------+--------+
+(B[0;1m2 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacitytable]> INSERT INTO Persons (PersonID, LastName, FirstName, Addres s, City) VALUES (
+    -> (2,'Taherpour','Kamran','456 DEF','Irvine');[1P[1@3[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@L[1@t[1@e[1@s[1@t[C[C[C[1@F[1@t[1@e[1@s[1@t[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[1P DEF','Irvine');[1P DEF','Irvine');[1P DEF','Irvine');8 DEF','Irvine');8 DEF','Irvine');8 DEF','Irvine');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+(B[0;7m(B[mMySQL [udacitytable]> INSERT INTO Persons (PersonID, LastName, FirstName, Addresss, City) VALUES ( (3,'Ltest','Ftest','888 DEF','Irvine');[1P[1P
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+(B[0;7m(B[mMySQL [udacitytable]> [KMySQL [udacitytable]> 

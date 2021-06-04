@@ -1,0 +1,60 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.05.12 12:27:20 =~=~=~=~=~=~=~=~=~=~=~=
+
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ 
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ 
+]0;ec2-user@ip-10-2-10-210:~[ec2-user@ip-10-2-10-210 ~]$ mysql -u admin -p -h udacity.c1mkkzccazo0.us-west-1.rds.amazonaws.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo yum install mysql[Kmysql -u admin -p -h udacity.c1mkkzccazo0.us-west-1.rds.amazonaws.com
+Enter password: 
+(B[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \g.
+(B[m(B[0;1mYour MySQL connection id is 12
+Server version: 8.0.20 Source distribution
+
+(B[m(B[0;1mCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+(B[m(B[0;1mType 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+(B[m[?1034hMySQL [(none)]> INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (3,'Ltest',,'Ftest','888 DEF','Irvine');[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C (3,'Ltest[C[2@,'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[45P(3,'Ltest','Ftest','888 DEF','Irvine');
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CINSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES ([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C;[Kselect * from Persons[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Puse udacitytable;;[Kselect * from udacitytable[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Phow databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| udacity            |
+| udacitytable       |
++--------------------+
+(B[0;1m5 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [(none)]> show databases;INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (3,'Ltest',,'Ftest','888 DEF','Irvine');[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C (3,'Ltest[C[2@,'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[45P(3,'Ltest','Ftest','888 DEF','Irvine');
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CINSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES ([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C;[Kselect * from Persons[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Puse udacitytable;;[Kuse udacitytable;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+(B[0;1mDatabase changed
+(B[mMySQL [udacitytable]> use udacitytable;[2Pshow databases;INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (3,'LLtest','Ftest','888 DEF','Irvine');[Ashow databases;[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CINSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (3,'LLtest','Ftest','888 DEF','Irvine');[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C (3,[2@'L[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[39P(3,'Ltest','Ftest','888 DEF','Irvine');
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CINSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES ([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C;[Kselect * from Persons
+    -> ;
++----------+-----------+-----------+---------+--------+
+| PersonID | LastName  | FirstName | Address | City   |
++----------+-----------+-----------+---------+--------+
+|        1 | Kyle      | Law       | 123 ABC | irvine |
+|        2 | Willis    | Jack    | 456 DEF | Irvine |
++----------+-----------+-----------+---------+--------+
+(B[0;1m2 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacitytable]> ;select * from Persons[4Puse udacitytable;[2Pshow databases;INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (3,'LLtest','Ftest','888 DEF','Irvine');
+(B[0;1mQuery OK, 1 row affected (0.02 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacitytable]> INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (3,'LLtest','Ftest','888 DEF','Irvine');[A;[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cselect * from Persons;
++----------+-----------+-----------+---------+--------+
+| PersonID | LastName  | FirstName | Address | City   |
++----------+-----------+-----------+---------+--------+
+|        1 | Kyle      | Law       | 123 ABC | irvine |
+|        2 | Willis    | Jack    | 456 DEF | Irvine |
+|        3 | Ltest     | Ftest     | 888 DEF | Irvine |
++----------+-----------+-----------+---------+--------+
+(B[0;1m3 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacitytable]> 

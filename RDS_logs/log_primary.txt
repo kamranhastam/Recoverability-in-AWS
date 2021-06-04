@@ -1,0 +1,185 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.05.12 00:20:49 =~=~=~=~=~=~=~=~=~=~=~=
+
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ 
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ 
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ pwd
+/home/ec2-user
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ ls
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ sho
+shopt             showconsolefont   showkey           
+show-changed-rco  show-installed    showmount         
+[ec2-user@ip-10-1-10-89 ~]$ sho[K[K[Ksudo yum update
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 3.7 kB     00:00     
+No packages marked for update
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ mysql -u admin -p -h database-1.cy233czv6r8l.us-east -1.rds.amazonaws.com
+
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ sudo[K[K[K[Kmysq[K[K[K[Kmysql --version
+-bash: mysql: command not found
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ sudo yum install mysql
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 3.7 kB     00:00     
+Resolving Dependencies
+--> Running transaction check
+---> Package mariadb.x86_64 1:5.5.68-1.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package        Arch          Version                   Repository         Size
+================================================================================
+Installing:
+ mariadb        x86_64        1:5.5.68-1.amzn2          amzn2-core        8.8 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 8.8 M
+Installed size: 49 M
+Is this ok [y/d/N]: Y y
+Downloading packages:
+mariadb-5.5.68-1.amzn2.x86_64.rpm                          | 8.8 MB   00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [                             ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#                            ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##                           ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###                          ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [####                         ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#####                        ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [######                       ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#######                      ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [########                     ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#########                    ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##########                   ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###########                  ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [############                 ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#############                ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##############               ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###############              ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [################             ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#################            ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##################           ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###################          ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [####################         ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#####################        ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [######################       ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#######################      ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [########################     ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [#########################    ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [##########################   ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [###########################  ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86 [############################ ] 1/1  Installing : 1:mariadb-5.5.68-1.amzn2.x86_64                              1/1 
+  Verifying  : 1:mariadb-5.5.68-1.amzn2.x86_64                              1/1 
+
+Installed:
+  mariadb.x86_64 1:5.5.68-1.amzn2                                               
+
+Complete!
+]0;ec2-user@ip-10-1-10-89:~[ec2-user@ip-10-1-10-89 ~]$ mysql -u admin -p -h database-1.cy233czv6r8l.us-east--1.rds.amazonaws.com
+Enter password: 
+(B[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \g.
+(B[m(B[0;1mYour MySQL connection id is 46
+Server version: 8.0.20 Source distribution
+
+(B[m(B[0;1mCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+(B[m(B[0;1mType 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+(B[m[?1034hMySQL [(none)]> USE mysql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+(B[0;1mDatabase changed
+(B[mMySQL [mysql]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| udacity            |
++--------------------+
+
+(B[0;7m(B[mMySQL [mysql]> show tables
+    -> ;
++-------------------------------+
+| Tables_in_mysql               |
++-------------------------------+
+| columns_priv                  |
+| component                     |
+| db                            |
+| default_roles                 |
+| engine_cost                   |
+| func                          |
+| general_log                   |
+| general_log_template          |
+| global_grants                 |
+| gtid_executed                 |
+| help_category                 |
+| help_keyword                  |
+| help_relation                 |
+| help_topic                    |
+| innodb_index_stats            |
+| innodb_table_stats            |
+| password_history              |
+| plugin                        |
+| procs_priv                    |
+| proxies_priv                  |
+| rds_configuration             |
+| rds_global_status_history     |
+| rds_global_status_history_old |
+| rds_heartbeat2                |
+| rds_history                   |
+| rds_replication_status        |
+| rds_sysinfo                   |
+| role_edges                    |
+| server_cost                   |
+| servers                       |
+| slave_master_info             |
+| slave_relay_log_info          |
+| slave_worker_info             |
+| slow_log                      |
+| slow_log_template             |
+| tables_priv                   |
+| time_zone                     |
+| time_zone_leap_second         |
+| time_zone_name                |
+| time_zone_transition          |
+| time_zone_transition_type     |
+| user                          |
++-------------------------------+
+
+(B[0;7m(B[mMySQL [mysql]> ;create database udacitytable;
+(B[0;1mQuery OK, 1 row affected (0.02 sec)
+(B[m(B[0;1m
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+(B[0;7m(B[mMySQL [mysql]> ;show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| udacity            |
+| udacitytable       |
++--------------------+
+(B[0;1m5 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [mysql]> use udacitytable
+(B[0;1mDatabase changed
+(B[mMySQL [udacitytable]> CREATE TABLE Persons (
+    ->   PersonID int,
+    ->   LastName varchar(255),  
+    ->   FirstName varchar(255),
+    ->   Address varchar(255),
+    ->   City varchar(255)
+    -> );
+
+(B[0;7m(B[mMySQL [udacitytable]> INSERT INTO persons (PersonID, LastName, FirstName, Address, City) VALUES ((1,'Kyle','Law','123 ABC','irvine');[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cersons (PersonID, LastName, FirstName, Address, City) VALUES (1[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CPersons (PersonID, LastName, FirstName, Address, City) VALUES ([1@1[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+(B[0;1mQuery OK, 1 row affected (0.02 sec)
+(B[m(B[0;1m
+
+(B[0;7m(B[mMySQL [udacitytable]> select * from Persons
+    -> ;
++----------+----------+-----------+---------+--------+
+| PersonID | LastName | FirstName | Address | City   |
++----------+----------+-----------+---------+--------+
+|        1 | Kyle     | Law       | 123 ABC | irvine |
++----------+----------+-----------+---------+--------+
+(B[0;1m1 row in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacitytable]> ;select * from Persons;[Kshow * PersonsINSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES ((1,'Kyle','Law','123 ABC','irvine');[1P[1@2[C[C[C[C[C[C[1P[1P[1P[1P[1@T[1@a[1@h[1@e[1@r[1@p[1@o[1@u[1@r[C[C[C[C[C[C[1P[1P[1P[1@K[1@a[1@m[1@r[1@a[1@n[C[C[C[C[C[C[1P ABC','irvine');[1P ABC','irvine');[1P ABC','irvine');4 ABC','irvine');5 ABC','irvine');6 ABC','irvine');[C[C[C[C[1P','irvine');[1P','irvine');[1P','irvine');D','irvine');E','irvine');F','irvine');[C[C[C[C[1Prvine');Irvine');
+(B[0;1mQuery OK, 1 row affected (0.01 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacitytable]> INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES ((2,'Willis','Jack','456 DEF','Irvine');[A;[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cselect * from Persons
+    -> ;
++----------+-----------+-----------+---------+--------+
+| PersonID | LastName  | FirstName | Address | City   |
++----------+-----------+-----------+---------+--------+
+|        1 | Kyle      | Law       | 123 ABC | irvine |
+|        2 | Willis    | Jack      | 456 DEF | Irvine |
++----------+-----------+-----------+---------+--------+
+(B[0;1m2 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacitytable]> 
